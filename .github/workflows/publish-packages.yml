@@ -21,7 +21,7 @@ jobs:
           fetch-depth: 0
           filter: blob:none
           token: ${{ secrets.GITHUB_BOT_TOKEN }}
-      - uses: actions/setup-node@60edb5dd545a775178f52524783378180af0d1f8 # v4.0.2
+      - uses: actions/setup-node@1e60f620b9541d16bece96c5465dc8ee9832be0b # v4.0.3
         with:
           node-version: "18.x"
           registry-url: "https://registry.npmjs.org/"
@@ -33,7 +33,7 @@ jobs:
           pnpm bootstrap
           pnpm build
 
-      - uses: changesets/action@aba318e9165b45b7948c60273e0b72fce0a64eb9 # v1.4.7
+      - uses: changesets/action@3de3850952bec538fde60aac71731376e57b9b57 # v1.4.8
         with:
           publish: pnpm ci:publish
         env:
